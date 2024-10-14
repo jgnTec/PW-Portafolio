@@ -11,8 +11,9 @@
       <li><a href="/listas.html">Volver a listas ⬅️</a></li>
       <li><a href="/index.html">Ir a inicio 🏠</a></li>
    </ul>
-
-   <table border="1" bgcolor="aliceblue" align="center">
+   <hr>
+   <h2>Tablas con formato</h2>
+   <table border="1" bgcolor="sunflower" align="center">
       <tr>
          <td>Nombre 1</td>
          <td bgcolor="yellow">Nombre 2</td>
@@ -31,7 +32,7 @@
       </tr>
    </table>
    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo non assumenda et, recusandae aliquid, accusantium molestiae sequi accusamus debitis consequatur sit necessitatibus quasi magnam, inventore quis suscipit nostrum enim officiis.</p>
-   <table border="1" bgcolor="limegreen" align="center">
+   <table border="1" bgcolor="red" align="center">
       <tr>
          <td></td>
          <td>🥳</td>
@@ -48,6 +49,73 @@
          <td>🥳</td>
          <td></td>
       </tr>
+   </table>
+   <hr>
+   <h2>Tablas con semántica</h2>
+   <table border="1" align="center">
+      <thead>
+         <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+         </tr>
+      </thead>
+      <!-- Encabezado de la tabla -->
+      <tbody>
+         <tr>
+            <td>Jaime</td>
+            <td>37</td>
+         </tr>
+         <tr>
+            <td>Alondra</td>
+            <td>23</td>
+         </tr>
+      </tbody>
+      <!-- Pie de la tabla -->
+      <tfoot>
+         <tr>
+            <td>Total</td>
+            <td>60</td>
+         </tr>
+      </tfoot>
+   </table>
+   <br><br><br>
+   <table border="1" bgcolor="royalblue" align="center">
+      <thead bgcolor="lightblue">
+         <tr>
+            <th colspan="2">Información</th>
+         </tr>
+         <tr>
+            <th>Alumno</th>
+            <th>Materias</th>
+         </tr>
+      </thead>
+      <tbody bgcolor="aliceblue">
+         <tr>
+            <td rowspan="2">Jesús García Nigoche</td>
+            <td>Administración de bases de datos</td>
+         <tr>
+            <td>Programación web</td>
+         </tr>
+      </tbody>
+   </table>
+   <br><br><br>
+   <ul><li>Ejercicio: crear una tabla usando <strong><code>colspan</code></strong> y <strong><code>rowspan</code></strong></li></ul>
+   <table border="2" bgcolor="lightgray" align="center">
+      <tbody>
+         <tr>
+            <td colspan="3" bgcolor="green"><h1>1</h1></td>
+            <td rowspan="3" bgcolor="purple"><h1>4</h1></td>
+         </tr>
+         <tr>
+            <td colspan="2" bgcolor="blue"><h1>2</h1></td>
+            <td bgcolor="yellow"><h1>3</h1></td>
+         </tr>
+         <tr>
+            <td bgcolor="pink"><h1>5</h1></td>
+            <td bgcolor="red"><h1>6</h1></td>
+            <td bgcolor="orange"><h1>7</h1></td>
+         </tr>
+      </tbody>
    </table>
 </body>
 </html>
