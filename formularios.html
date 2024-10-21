@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <ul type="none">
+        <li><code><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#000000" viewBox="0 0 256 256"><path d="M228,104a12,12,0,0,1-24,0V69l-59.51,59.51a12,12,0,0,1-17-17L187,52H152a12,12,0,0,1,0-24h64a12,12,0,0,1,12,12Zm-44,24a12,12,0,0,0-12,12v64H52V84h64a12,12,0,0,0,0-24H48A20,20,0,0,0,28,80V208a20,20,0,0,0,20,20H176a20,20,0,0,0,20-20V140A12,12,0,0,0,184,128Z"></path></svg> </code><a href="objetos.html">Volver a objetos ⬅️</a></li>
+        <li><code><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#000000" viewBox="0 0 256 256"><path d="M228,104a12,12,0,0,1-24,0V69l-59.51,59.51a12,12,0,0,1-17-17L187,52H152a12,12,0,0,1,0-24h64a12,12,0,0,1,12,12Zm-44,24a12,12,0,0,0-12,12v64H52V84h64a12,12,0,0,0,0-24H48A20,20,0,0,0,28,80V208a20,20,0,0,0,20,20H176a20,20,0,0,0,20-20V140A12,12,0,0,0,184,128Z"></path></svg> </code><a href="index.html">Ir a inicio 🏠</a></li>
+        <li><code><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#000000" viewBox="0 0 256 256"><path d="M228,104a12,12,0,0,1-24,0V69l-59.51,59.51a12,12,0,0,1-17-17L187,52H152a12,12,0,0,1,0-24h64a12,12,0,0,1,12,12Zm-44,24a12,12,0,0,0-12,12v64H52V84h64a12,12,0,0,0,0-24H48A20,20,0,0,0,28,80V208a20,20,0,0,0,20,20H176a20,20,0,0,0,20-20V140A12,12,0,0,0,184,128Z"></path></svg> </code><a href="horario.html">Seguir a horario ➡️</a></li>
+    </ul>
+    <hr>
+    <h2>Formulario con el método POST</h2>
+    <form action="formularios.html" method="post">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <input type="text" name="nombre" placeholder="Nombre" required/><br>
+            <input type="text" name="apellido_paterno" placeholder="Apellido paterno" required/><br>
+            <input type="text" name="apellido_materno" placeholder="Apellido materno" required/>
+        </fieldset>
+        <br>
+        <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M222.14,69.17,186.83,33.86A19.86,19.86,0,0,0,172.69,28H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V83.31A19.86,19.86,0,0,0,222.14,69.17ZM164,204H92V160h72Zm40,0H188V156a20,20,0,0,0-20-20H88a20,20,0,0,0-20,20v48H52V52H171l33,33ZM164,84a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h56A12,12,0,0,1,164,84Z"></path></svg>
+        </button>
+        <button type="reset">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M216,204H141l86.84-86.84a28,28,0,0,0,0-39.6L186.43,36.19a28,28,0,0,0-39.6,0L28.19,154.82a28,28,0,0,0,0,39.6l30.06,30.07A12,12,0,0,0,66.74,228H216a12,12,0,0,0,0-24ZM163.8,53.16a4,4,0,0,1,5.66,0l41.38,41.38a4,4,0,0,1,0,5.65L160,151l-47-47ZM71.71,204,45.16,177.45a4,4,0,0,1,0-5.65L96,121l47,47-36,36Z"></path></svg>
+        </button>
+        <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+        </button>
+    </form>
+    <br>
+    <h2>Formulario con el método GET</h2>
+    <form action="formularios.html" method="get">
+        <input type="text" name="nombre" placeholder="Nombre" required/><br>
+        <input type="text" name="apellido_paterno" placeholder="Apellido paterno" required/><br>
+        <input type="text" name="apellido_materno" placeholder="Apellido materno" required/>
+        <br><br>
+        <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M222.14,69.17,186.83,33.86A19.86,19.86,0,0,0,172.69,28H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V83.31A19.86,19.86,0,0,0,222.14,69.17ZM164,204H92V160h72Zm40,0H188V156a20,20,0,0,0-20-20H88a20,20,0,0,0-20,20v48H52V52H171l33,33ZM164,84a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h56A12,12,0,0,1,164,84Z"></path></svg>
+        </button>
+        <button type="reset">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M216,204H141l86.84-86.84a28,28,0,0,0,0-39.6L186.43,36.19a28,28,0,0,0-39.6,0L28.19,154.82a28,28,0,0,0,0,39.6l30.06,30.07A12,12,0,0,0,66.74,228H216a12,12,0,0,0,0-24ZM163.8,53.16a4,4,0,0,1,5.66,0l41.38,41.38a4,4,0,0,1,0,5.65L160,151l-47-47ZM71.71,204,45.16,177.45a4,4,0,0,1,0-5.65L96,121l47,47-36,36Z"></path></svg>
+        </button>
+        <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+        </button>
+    </form>
+    <br>
+    <h2>Formulario de archivos</h2>
+    <form action="formularios.html">
+        <input type="text" name="nombre"/><br>
+        <input type="password" name="clave"/>
+        <input type="file" name="archivo"/><br>
+        <input type="checkbox" name="acepto"/>
+        <input type="radio" name="sexo" value="M"/>
+        <input type="hidden" name="folio">
+        <br><br>
+        <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M222.14,69.17,186.83,33.86A19.86,19.86,0,0,0,172.69,28H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V83.31A19.86,19.86,0,0,0,222.14,69.17ZM164,204H92V160h72Zm40,0H188V156a20,20,0,0,0-20-20H88a20,20,0,0,0-20,20v48H52V52H171l33,33ZM164,84a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h56A12,12,0,0,1,164,84Z"></path></svg>
+        </button>
+        <button type="reset">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M216,204H141l86.84-86.84a28,28,0,0,0,0-39.6L186.43,36.19a28,28,0,0,0-39.6,0L28.19,154.82a28,28,0,0,0,0,39.6l30.06,30.07A12,12,0,0,0,66.74,228H216a12,12,0,0,0,0-24ZM163.8,53.16a4,4,0,0,1,5.66,0l41.38,41.38a4,4,0,0,1,0,5.65L160,151l-47-47ZM71.71,204,45.16,177.45a4,4,0,0,1,0-5.65L96,121l47,47-36,36Z"></path></svg>
+        </button>
+        <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+        </button>
+    </form>
+    <br>
+    <h2>Formularios variados</h2>
+    <form action="formularios.html">
+        <input type="email" name="email" placeholder="Correo electrónico"/>
+        <input type="url" name="url" placeholder="URL"/>
+        <input type="number" name="numero" placeholder="Número"/>
+        <input type="range" name="rango" min="0" max="100" step="1" value="50"/>
+        <input type="date" name="fecha"/>
+        <input type="month" name="mes"/>
+        <input type="week" name="semana"/>
+        <input type="time" name="hora"/>
+        <input type="datetime-local" name="fecha_hora"/>
+        <input type="color" name="color"/>
+        <input type="search" name="buscador" placeholder="Buscar"/>
+        <input type="tel" name="telefono" placeholder="Número de teléfono"/>
+        <br><br>
+        <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M222.14,69.17,186.83,33.86A19.86,19.86,0,0,0,172.69,28H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V83.31A19.86,19.86,0,0,0,222.14,69.17ZM164,204H92V160h72Zm40,0H188V156a20,20,0,0,0-20-20H88a20,20,0,0,0-20,20v48H52V52H171l33,33ZM164,84a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h56A12,12,0,0,1,164,84Z"></path></svg>
+        </button>
+        <button type="reset">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M216,204H141l86.84-86.84a28,28,0,0,0,0-39.6L186.43,36.19a28,28,0,0,0-39.6,0L28.19,154.82a28,28,0,0,0,0,39.6l30.06,30.07A12,12,0,0,0,66.74,228H216a12,12,0,0,0,0-24ZM163.8,53.16a4,4,0,0,1,5.66,0l41.38,41.38a4,4,0,0,1,0,5.65L160,151l-47-47ZM71.71,204,45.16,177.45a4,4,0,0,1,0-5.65L96,121l47,47-36,36Z"></path></svg>
+        </button>
+        <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+        </button>
+    </form>
+    <br>
+    <h2>Ejemplos</h2>
+    <form action="formularios.html" method="post">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre"/>
+        </p>
+        <div>
+            <label for="masculino">
+                <input type="radio" id="masculino" name="sexo" value="M" checked>
+                Masculino
+            </label>
+        </div>
+        <div>
+            <label for="femenino">
+                <input type="radio" id="femenino" name="sexo" value="F">
+                Femenino
+            </label>
+        </div>
+        <div>
+            <label for="no_especificado">
+                <input type="radio" id="no_especificado" name="sexo" value="X">
+                No especificado
+            </label>
+        </div>
+        <br>
+        <div>
+            <select name="pais">
+                <option value="null selected">Escoge un país...</option>
+                <option value="MX">México</option>
+                <option value="US">Estados unidos</option>
+                <option value="CA">Canadá</option>
+            </select>
+        </div>
+        <div>
+            <select name="colores">
+                <optgroup label="Colores primarios">
+                    <option value="rojo">Rojo</option>
+                    <option value="verde">Verde</option>
+                    <option value="azul">Azul</option>
+                </optgroup>
+                <optgroup label="Colores secundarios">
+                    <option value="amarillo">Amarillo</option>
+                    <option value="naranja">Naranja</option>
+                    <option value="violeta">Violeta</option>
+                </optgroup>
+            </select>
+        </div>
+        <br>
+        <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M222.14,69.17,186.83,33.86A19.86,19.86,0,0,0,172.69,28H48A20,20,0,0,0,28,48V208a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V83.31A19.86,19.86,0,0,0,222.14,69.17ZM164,204H92V160h72Zm40,0H188V156a20,20,0,0,0-20-20H88a20,20,0,0,0-20,20v48H52V52H171l33,33ZM164,84a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h56A12,12,0,0,1,164,84Z"></path></svg>
+        </button>
+        <button type="reset">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M216,204H141l86.84-86.84a28,28,0,0,0,0-39.6L186.43,36.19a28,28,0,0,0-39.6,0L28.19,154.82a28,28,0,0,0,0,39.6l30.06,30.07A12,12,0,0,0,66.74,228H216a12,12,0,0,0,0-24ZM163.8,53.16a4,4,0,0,1,5.66,0l41.38,41.38a4,4,0,0,1,0,5.65L160,151l-47-47ZM71.71,204,45.16,177.45a4,4,0,0,1,0-5.65L96,121l47,47-36,36Z"></path></svg>
+        </button>
+        <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+        </button>
+    </form>
+</body>
+</html>
