@@ -4,3 +4,27 @@
 h1 {
    color: #09f;
 }
+.verde {
+   background-color: #0c3;
+   color: #000;
+}
+h6.verde {
+   background-color: #5f5;
+   color: #040;
+}
+#sections {
+   background-color: hsl(20, 10, 10);
+   color: hsl(20, 80, 60);
+}
+[type="text"] {
+   border: 2px solid #404;
+}
+input[type] {
+   background-color: rgb(236, 236, 4);
+}
+section.hover:hover {
+   background-color: #fcc;
+}
+p::first-line {
+   font-family: 'Comic Sans MS', sans-serif;
+}
