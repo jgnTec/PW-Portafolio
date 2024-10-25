@@ -1,0 +1,19 @@
+h1 {
+   font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+}
+hr {
+   background-color: #09f;
+   height: 20px;
+}
+h2 {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 24px;
+   font-weight: bold;
+}
+h3 {
+   color : #09f;
+   background-color: #0c9;
+   border: 1px solid #f0f;
+   box-shadow: 2px 2px 5px #ff0;
+   text-shadow: 1px 1px 2px #f33;
+}
