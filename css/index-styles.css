@@ -1,0 +1,54 @@
+/* Reglas predefinidas */
+body * { font-family: "Montserrat", system-ui, sans-serif; }
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.2rem; }
+
+/* Reglas generales */
+/*header * {
+   border: 1px solid orangered;
+}*/
+.mis-datos, header > section, header > section > nav, section { display: flex; }
+
+/* Estilos del documento */
+header h1 { 
+   text-align: center;
+}
+.yo { 
+   padding: 16px;
+   display: flex;
+   justify-content: center;
+}
+.mis-datos {
+   flex-direction: column;
+   justify-content: center;
+   text-align: right;
+   margin-right: 16px;
+}
+.mis-datos > h2 {
+   max-width: 7ch;
+   line-height: 90%;
+}
+nav > ul > li:has(a) {
+   margin-bottom: -4px;
+}
+header > section > nav {
+   flex-direction: row;
+}
+section {
+   justify-content: center;
+}
+header > section {
+   margin-top: 32px;
+}
+body {
+   max-width: 90%;
+   margin: auto;
+}
+p {
+   margin: 24px 0;
+}
+.repo-en-github {
+   text-align: center;
+}
