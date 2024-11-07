@@ -6,23 +6,24 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index-styles.css">
     <title>Portafolio</title>
 </head>
 <body>
     <header>
-        <h1>Prácticas de programación web</h1>
-        <section>
+        <h1>Portafolio de <span>programación web</span></h1>
+        <section class="principal">
             <div class="yo">
                 <div class="mis-datos">
                     <h2>Jesús García Nigoche</h2>
                     <h3>22690042</h3>
                 </div>
-                <img src="assets/IMG_E3041b-edit3.webp" alt="Foto de mi perfil" width="160" height="160">
+                <div class="mi-foto"></div>
             </div>
+            <div class="linea-vertical"></div>
             <nav>
-                <ul type="none">
+                <ul>
                     <li><strong>Lugares</strong></li>
                     <li><a href="textos.html">Ir a textos 💬</a></li>
                     <li><a href="tecnico.html">Ir a texto técnico 📖</a></li>
@@ -33,24 +34,30 @@
                     <li><a href="estilos.html">Ir a estilos con CSS 🎨</a></li>
                     <li><a href="kitchen-sink.html">Ir a Kitchen Sink 🍳</a></li>
                 </ul>
-                <ul type="none">
+                <ul>
                     <li><strong>Ejercicios</strong></li>
                     <li><a href="horario.html">Ejercicio: Horario 📅</a></li>
                     <li><a href="cv.html">Ejercicio: Currículum vitae 📖</a></li>
                     <li><a href="ks2.html">Ejercicio: Kitchen Sink 🧩</a></li>
                 </ul>
-                <ul type="none">
+                <ul>
                     <li><strong>Enlaces externos</strong></li>
-                    <li><a href="https://www.facebook.com">Ir a Facebook</a></li>
-                    <li><a href="https://www.instagram.com">Ir a Instagram</a></li>
-                    <li><a href="https://www.google.com">Ir a Google</a></li>
-                    <li><a href="https://paypal.me/jgn1022">Dóname un café</a></li>
+                    <li><a class="fb" href="https://www.facebook.com">Ir a Facebook</a></li>
+                    <li><a class="ig" href="https://www.instagram.com">Ir a Instagram</a></li>
+                    <li><a class="goo" href="https://www.google.com">Ir a Google</a></li>
+                    <li><a class="pay" href="https://paypal.me/jgn1022">Dóname un café</a></li>
                 </ul>
             </nav>
         </section>
+        <a href="">
+            <section id="repo-en-github" class="principal">
+                <img src="assets/github.svg" alt="GitHub">
+                <div class="linea-vertical"></div>
+                <p>Visita el repo de esta página en <br> GitHub para ver mi progreso 🥳</p>
+            </section>
+        </a>
     </header>  
     <main>
-        <p class="repo-en-github">Visita <a href="https://github.com/jgnTec" target="_blank">el repo de esta página en GitHub</a> para ver mi progreso 🥳</p>
         <article>
             <h4>Mi portafolio</h4>
             <p>Aquí se puede ver mi portafolio</p>
