@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Manejo de eventos en JavaScript</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.jade.min.css">
+</head>
+<body>
+   <main class="container">
+      <h1>Manejo de eventos en JavaScript</h1>
+      <article>
+         <h2>Propiedad <code>on</code></h2>
+         <p>Aquí se puede ver un ejemplo de cómo se manejan eventos en JavaScript</p>
+         <p>Este es un párrafo de ejemplo para la clase del profe Jaime y quiero extender el texto lo más largo posible para que se vea bien en la pantalla.</p>
+         <button onclick="saludar()">Saludar</button>
+         <output id="salida_boton">Nada aún</output>
+      </article>
+      <article>
+         <h2>Propiedad <code>addEventListener</code></h2>
+         <p>Aquí se puede ver un ejemplo de cómo se manejan eventos en JavaScript</p>
+         <p>Este es un párrafo de ejemplo para la clase del profe Jaime y quiero extender el texto lo más largo posible para que se vea bien en la pantalla.</p>
+         <button id="otro_boton">Otro botón</button>
+         <output id="salida_otro">Nada aún</output>
+      </article>
+      <article>
+         <h2>Eventos de input</h2>
+         <form action="#">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="off">
+         </form>
+         <output id="salida_teclado">Nada todavía</output>
+      </article>
+   </main>
+   <script src="js/eventos.js"></script>
+</body>
+</html>
