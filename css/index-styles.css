@@ -10,10 +10,16 @@ h4 { font-size: 1.2rem; }
    border: 1px solid orangered;
 }*/
 :root {
+   --colorDeAcento2: #91ffc8;
+   --colorDeAcento1: #00c864;
    --colorDeAcento: #006432;
+   --colorDeAcento-1: #003216;
+   --colorDeAcento-2: #001608; 
 }
-ul > li:has(a)::marker { content: url(/assets/external.svg) " "; }
-ul > li:has(strong) { list-style: none; }
+ul, ol { padding-left: 20px; }
+ul > li:has(a)::marker, ol > li:has(a)::marker { content: url(../assets/external.svg) " "; }
+ul > li:has(strong), ol > li:has(strong) { list-style: none; margin-bottom: 4px; }
+ul > li:has(strong)::marker, ol > li:has(strong)::marker { content: none; }
 a { text-decoration: none; }
 hr { margin: 32px; }
 main {
@@ -23,6 +29,7 @@ main {
    background-color: #eee;
    padding: 16px;
    max-width: fit-content;
+   border: 1px solid var(--colorDeAcento-1);
    border-radius: 16px;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -32,26 +39,32 @@ main {
    height: auto;
 }
 .degradado-texto-verdoso {
-   background-color: black;
-   background-image: linear-gradient(45deg, #00c864, var(--colorDeAcento));
-   background-size: 100%;
-   background-repeat: repeat;
+   background-image: linear-gradient(to right, var(--colorDeAcento1), var(--colorDeAcento), var(--colorDeAcento1) );
+   background-size: 200%;
    background-clip: text;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    -moz-background-clip: text;
    -moz-text-fill-color: transparent;
 }
-.contenedor-generico { display: flex; justify-content: center; align-items: center; }
+@keyframes movTextoVerde { to { background-position: 200%; } }
 
 /* Estilos del documento */
 h1 {
+   font-family: "Roboto Flex", system-ui, sans-serif;
+   letter-spacing: 2px;
    line-height: 95%;
    text-transform: uppercase;
+}
+h1 > span {
+   font-family: "JetBrains Mono", monospace, system-ui;
+   animation: movTextoVerde 3s linear infinite;
+   text-transform: none;
 }
 .yo { 
    display: flex;
    flex-direction: row;
+   align-items: center;
 }
 .mis-datos {
    display: flex;
@@ -67,25 +80,58 @@ h1 {
 nav > ul > li:has(a) {
    margin-bottom: -4px;
 }
-body > nav div.destacado {
+body > nav {
+   background-color: #eee;
    display: flex;
    flex-direction: column;
    align-items: center;
+   padding: 4vh 0;
+   border-top: 1px solid var(--colorDeAcento-1);
+   border-bottom: 1px solid var(--colorDeAcento-1);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-body > nav div.destacado h3 {
-   margin-bottom: 16px;
-}
-body > nav div.destacado div {
+body > nav div { 
    display: flex;
 }
-#principio {
+body > nav > h3 {
+   font-family: "IBM Plex Sans", sans-serif;
+   background-color: var(--colorDeAcento2);
+   background-clip: none;
+   margin-bottom: 16px;
+   text-align: center;
+   width: calc(50% + 5vw);
+   border: 1px solid var(--colorDeAcento-1);
+   border-radius: 16px;
+}
+nav > div > ul > li:has(strong) {
+   padding: 4px 16px; 
+   border-radius: 16px;
+   text-align: center; 
+   border: 1px dotted var(--colorDeAcento-1);
+}
+nav > div > ul > li:has(strong) > strong {
+   font-family: "Roboto Flex", sans-serif;
+}
+body > header > section > div.logos {
+   display: flex;
+   align-items: flex-start;
+   margin-bottom: 8px;
+}
+body > header > section > div.logos > img {
+   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.4));
+   margin: 4px;
+}
+body > header > section > div.logos > img[alt="PHP"] {
+   margin: 4px 8px;
+}
+header#principio {
    height: 100vh;
    padding: 0 5vw;
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
-#principio > section {
+header#principio > section:nth-child(2) {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -97,25 +143,31 @@ main p {
    text-align: center;
 }
 .mi-foto {
-   background-image: url(/assets/IMG_E3041b-edit3.webp);
+   background-image: url(../assets/IMG_E3041b-edit3.webp);
    background-size: cover;
    min-width: 200px;
    min-height: 200px;
 }
-li:has(a.fb)::marker { content: url(/assets/facebook.svg) " "; }
-li:has(a.ig)::marker { content: url(/assets/instagram.svg) " "; }
-li:has(a.goo)::marker { content: url(/assets/google.svg) " "; }
-li:has(a.pay)::marker { content: url(/assets/paypal.svg) " "; }
-#repo-en-github {
+nav > div > ul {
+   margin: 0 8px;
+}
+li:has(a.fb)::marker { content: url(../assets/facebook.svg) " "; }
+li:has(a.ig)::marker { content: url(../assets/instagram.svg) " "; }
+li:has(a.goo)::marker { content: url(../assets/google.svg) " "; }
+li:has(a.pay)::marker { content: url(../assets/paypal.svg) " "; }
+section#repo-en-github.destacado {
    display: flex;
    margin-top: 32px;
    width: auto;
    align-items: center;
 }
-#repo-en-github img {
+section#repo-en-github.destacado img {
    min-width: 32px;
    min-height: 32px;
 }
-#repo-en-github .linea-vertical {
+section#repo-en-github.destacado div.linea-vertical {
    height: 3em;
+}
+main {
+   margin-top: 32px;
 }
