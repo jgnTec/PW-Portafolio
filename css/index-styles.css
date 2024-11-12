@@ -97,7 +97,7 @@ main p {
    text-align: center;
 }
 .mi-foto {
-   background-image: url(/assets/IMG_E3041b-edit3.webp);
+   background-image: url(../assets/IMG_E3041b-edit3.webp);
    background-size: cover;
    min-width: 200px;
    min-height: 200px;
