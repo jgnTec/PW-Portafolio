@@ -37,3 +37,18 @@ nombre.addEventListener("keyup",
       salida_teclado.innerHTML = `Se liberó <kbd>${event.key}</kbd>`;
    }
 );
+
+let miForm = document.getElementById("miForm");
+
+miForm.addEventListener("submit",
+   function(event) {
+      event.preventDefault();
+      //alert("Se inentó procesar el formulario");
+      let aTxt = document.getElementById("a");
+      let bTxt = document.getElementById("b");
+      //console.log(`Valores ingresados: ${aTxt.value} y ${bTxt.value}`);
+      let salida = document.getElementById("salida_suma");
+      salida.innerText = parseInt(aTxt.value) + parseInt(bTxt.value); 
+   }
+);
+
