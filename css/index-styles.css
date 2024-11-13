@@ -1,4 +1,5 @@
 /* Reglas predefinidas */
+html { scroll-behavior: smooth; }
 body * { font-family: "Montserrat", system-ui, sans-serif; }
 h1 { font-size: 3.2rem; }
 h2 { font-size: 2.4rem; }
@@ -48,6 +49,11 @@ main {
    -moz-text-fill-color: transparent;
 }
 @keyframes movTextoVerde { to { background-position: 200%; } }
+@keyframes brincar {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
 
 /* Estilos del documento */
 h1 {
@@ -125,7 +131,7 @@ body > header > section > div.logos > img[alt="PHP"] {
    margin: 4px 8px;
 }
 header#principio {
-   height: 100vh;
+   height: 90vh;
    padding: 0 5vw;
    display: flex;
    justify-content: space-between;
@@ -138,9 +144,6 @@ header#principio > section:nth-child(2) {
 }
 main p {
    margin: 24px 0;
-}
-.repo-en-github {
-   text-align: center;
 }
 .mi-foto {
    background-image: url(../assets/IMG_E3041b-edit3.webp);
@@ -160,6 +163,10 @@ section#repo-en-github.destacado {
    margin-top: 32px;
    width: auto;
    align-items: center;
+   transition: all 0.1s ease-in-out;
+}
+section#repo-en-github.destacado:hover {
+   transform: scale(1.05);
 }
 section#repo-en-github.destacado img {
    min-width: 32px;
@@ -170,4 +177,42 @@ section#repo-en-github.destacado div.linea-vertical {
 }
 main {
    margin-top: 32px;
+}
+.chevron-arriba {
+   position: fixed;
+   bottom: 32px;
+   right: 32px;
+   padding: 8px;
+   width: fit-content;
+   background-color: #eee;
+   border: 1px solid var(--colorDeAcento-1); 
+   border-radius: 100%;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   transition: background-color 0.1s ease-in-out, border 0.1s ease-in-out;
+}
+.chevron-arriba:hover {
+   border: 1px solid var(--colorDeAcento1);
+   background-color: var(--colorDeAcento2);
+}
+.chevron-arriba svg {
+   width: 32px;
+   height: 32px;
+   fill: var(--colorDeAcento-1);
+   transition: fill 0.1s ease-in-out;
+}
+.chevron-arriba:hover svg {
+   fill: var(--colorDeAcento);
+}
+div#flecha-hacia-abajo {
+   height: 8vh;
+   margin: 1vh 0;
+   display: flex;
+   justify-content: center;
+}
+div#flecha-hacia-abajo svg {
+   width: 8vh;
+   height: 8vh;
+   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.4));
+   fill: #fff;
+   animation: brincar 2s ease infinite;
 }
