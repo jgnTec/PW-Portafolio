@@ -49,11 +49,6 @@ main {
    -moz-text-fill-color: transparent;
 }
 @keyframes movTextoVerde { to { background-position: 200%; } }
-@keyframes brincar {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-30px);}
-	60% {transform: translateY(-15px);}
-}
 
 /* Estilos del documento */
 h1 {
@@ -131,7 +126,7 @@ body > header > section > div.logos > img[alt="PHP"] {
    margin: 4px 8px;
 }
 header#principio {
-   height: 90vh;
+   height: 100vh;
    padding: 0 5vw;
    display: flex;
    justify-content: space-between;
@@ -185,7 +180,7 @@ main {
    padding: 8px;
    width: fit-content;
    background-color: #eee;
-   border: 1px solid var(--colorDeAcento-1); 
+   border: 1px solid var(--colorDeAcento-1);
    border-radius: 100%;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    transition: background-color 0.1s ease-in-out, border 0.1s ease-in-out;
@@ -204,15 +199,14 @@ main {
    fill: var(--colorDeAcento);
 }
 div#flecha-hacia-abajo {
-   height: 8vh;
-   margin: 1vh 0;
+   height: 0;
    display: flex;
    justify-content: center;
 }
-div#flecha-hacia-abajo svg {
-   width: 8vh;
-   height: 8vh;
-   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.4));
-   fill: #fff;
-   animation: brincar 2s ease infinite;
+div#flecha-hacia-abajo img {
+   rotate: 130deg;
+   position: absolute;
+   bottom: 2vh;
+   width: 10vh;
+   height: 10vh;
 }
