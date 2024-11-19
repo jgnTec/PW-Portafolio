@@ -118,6 +118,9 @@ body > header > section > div.logos {
    align-items: flex-start;
    margin-bottom: 8px;
 }
+body > header > section > div.logos:first-child > img:first-child {
+   margin-left: 8px;
+}
 body > header > section > div.logos > img {
    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.4));
    margin: 4px;
