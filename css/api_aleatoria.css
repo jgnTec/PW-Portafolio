@@ -1,0 +1,54 @@
+h1, h2 { text-align: center; }
+
+h2 { margin-bottom: 32px; }
+
+div[role=search] { --pico-spacing: 0; }
+
+main > article > section { display: flex; }
+
+main > article > section > div#info-pais1 { width: 30%; }
+
+main > article > section > div#info-pais2 { width: 30%; }
+
+main > article > section > div#img-pais { width: 40%; }
+
+#modal {
+   display: none; 
+   position: fixed; 
+   z-index: 1; 
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   width: 100%; 
+   height: 100%; 
+   background-color: rgba(0,0,0,0.4); 
+}
+
+#contenido-modal {
+   background-color: var(--pico-background-color);
+   margin: 20vh auto;
+   padding: 20px;
+   border: 1px solid #888;
+   border-radius: 16px;
+   width: 50vw;
+   height: 60vh;
+   overflow: auto; 
+}
+
+#cerrar-modal {
+   float: right;
+   font-size: 32px;
+   transition: color 0.3s ease-in-out;
+}
+
+#cerrar-modal:hover {
+   cursor: pointer;
+   color: red;
+}
+
+#nombre:hover, #capital:hover, #habitantes:hover, #idiomas:hover, #img-pais:hover {
+   cursor: pointer;
+   color: #00895a;
+   transition: color 0.2s ease-in-out;
+}

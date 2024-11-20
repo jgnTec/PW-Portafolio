@@ -1,0 +1,26 @@
+nav ul {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.boton-inicio {
+   position: fixed;
+   bottom: 32px;
+   left: 32px;
+   padding: 8px;
+   width: 48px;
+   height: 48px;
+   border-radius: 100%;
+   filter: drop-shadow(4px 4px 4px gray);
+   transition: filter 0.2s ease-in-out;
+}
+
+.boton-inicio:hover{
+   filter: drop-shadow(4px 4px 4px black);
+}
+
+a:has(i) {
+   text-decoration: none;
+}

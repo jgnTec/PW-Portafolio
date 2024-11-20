@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ejercicio de API aleatoria</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.jade.min.css">
+   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+   <link rel="stylesheet" href="css/pico-styles.css">
+   <script src="js/api_aleatoria.js" defer></script>
+   <link rel="stylesheet" href="css/api_aleatoria.css">
+</head>
+<body>
+   <main class="container">
+      <h1>RESTful Countries</h1>
+      <article>
+         <div role="search">
+            <input type="text" id="caja-busqueda" placeholder="Buscar un país...">
+            <button id="boton-busqueda">Buscar</button>
+         </div>
+      </article>
+      <article>
+         <h2>Información del país</h2>
+         <section>
+            <div id="info-pais1">
+               <h4 id="nombre">Nombre</h4>
+               <p id="pais-nombre"></p>
+               <h4 id="capital">Capital</h4>
+               <p id="pais-capital"></p>
+            </div>
+            <div id="info-pais2">
+               <h4 id="habitantes">Habitantes</h4>
+               <p id="pais-habitantes"></p>
+               <h4 id="idiomas">Idiomas</h4>
+               <ul id="pais-idioma"></ul>
+            </div>
+            <div id="img-pais"><img id="pais-imagen" src="" alt=""></div>
+         </section>
+      </article>
+   </main>
+   <div id="modal"><div id="contenido-modal"></div></div>
+   <a role="button" class="boton-inicio outline secondary" href="index.html"><i class="ph ph-house"></i></a>
+</body>
+</html>
