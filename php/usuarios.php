@@ -21,6 +21,12 @@
 ?>
 <article>
    <h2>Lista de usuarios</h2>
+   <a href="formulario.php" role="button">Nuevo usuario</a>
+   <?php if(isset($_GET) && $_GET['ok']==1): ?>
+      <article>
+         ✅ Nuevo usuario guardado con éxito 
+      </article>
+   <?php endif; ?>
    <div class="overflow-auto">
       <table class="table">
          <thead>
