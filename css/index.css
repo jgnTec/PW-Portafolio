@@ -18,9 +18,10 @@ h4 { font-size: 1.2rem; }
    --colorDeAcento-2: #001608; 
 }
 ul, ol { padding-left: 20px; }
-ul > li:has(a)::marker, ol > li:has(a)::marker { content: url(../assets/external.svg) " "; }
+ul > li:has(a)::marker, ol > li:has(a)::marker { content: none; }
 ul > li:has(strong), ol > li:has(strong) { list-style: none; margin-bottom: 4px; }
 ul > li:has(strong)::marker, ol > li:has(strong)::marker { content: none; }
+nav > div > ul:nth-child(3) > li::marker { content: none; }
 a { text-decoration: none; }
 hr { margin: 32px; }
 main {
