@@ -20,7 +20,11 @@ function fetchPais(paisBuscar) {
          mostrarInformacion();
          limpiarElementos();
          contenidoNombre.innerText = pais[0].translations.spa.common;
-         contenidoCapital.innerText = pais[0].capital[0];
+         if (pais[0].capital) {
+            contenidoCapital.innerText = pais[0].capital[0];
+         } else {
+            contenidoCapital.innerText = "Este lugar no tiene capital";
+         }
          contenidoHabitantes.innerText = pais[0].population;
 
          let idiomas = Object.values(pais[0].languages);
@@ -117,7 +121,11 @@ function fetchCapitalPais(paisBuscar) {
          contenidoModal.appendChild(p4);
 
          t1.innerText = "Capital";
-         p1.innerText = pais[0].capital;
+         if (pais[0].capital) {
+            p1.innerText = pais[0].capital;
+         } else {
+            p1.innerText = "Este lugar no tiene capital";
+         }
          t2.innerText = "Región";
          p2.innerText = pais[0].region;
          t3.innerText = "Subregión";
@@ -275,6 +283,7 @@ function ocultarInformacion() {
 
 function errorBusqueda(error) {
    globalThis.alert("Error al buscar el país: " + error)
+   limpiarElementos();
    ocultarInformacion();
 }
 
