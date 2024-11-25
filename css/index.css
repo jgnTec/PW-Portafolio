@@ -87,23 +87,23 @@ body > nav {
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding: 4vh 0;
+   padding-bottom: 4vh;
    border-top: 1px solid var(--colorDeAcento-1);
    border-bottom: 1px solid var(--colorDeAcento-1);
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 body > nav div { 
    display: flex;
 }
 body > nav > h3 {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
    font-family: "IBM Plex Sans", sans-serif;
    background-color: var(--colorDeAcento2);
    background-clip: none;
    margin-bottom: 16px;
    text-align: center;
-   width: calc(50% + 5vw);
-   border: 1px solid var(--colorDeAcento-1);
-   border-radius: 16px;
+   padding: 16px 0;
+   width: 100%;
 }
 nav > div > ul > li:has(strong) {
    padding: 4px 16px; 
@@ -203,9 +203,13 @@ div#flecha-hacia-abajo {
    justify-content: center;
 }
 div#flecha-hacia-abajo img {
+   transition: all 0.1s ease-in-out;
    rotate: 130deg;
    position: absolute;
    bottom: 2vh;
    width: 10vh;
    height: 10vh;
+}
+div#flecha-hacia-abajo img:hover {
+   transform: scale(1.15);
 }

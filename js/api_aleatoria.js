@@ -17,6 +17,7 @@ function fetchPais(paisBuscar) {
    fetch(paisAPI)
       .then((response) => response.json())
       .then((pais) => {
+         mostrarInformacion();
          limpiarElementos();
          contenidoNombre.innerText = pais[0].translations.spa.common;
          contenidoCapital.innerText = pais[0].capital[0];
@@ -33,7 +34,7 @@ function fetchPais(paisBuscar) {
          contenidoImagen.setAttribute("src", pais[0].flags.png);
          contenidoImagen.setAttribute("alt", pais[0].flags.alt);
       })
-      .catch((error) => globalThis.alert("Error al buscar el país: " + error));
+      .catch((error) => errorBusqueda(error));
 }
 
 function fetchNombrePais(paisBuscar) {
@@ -82,7 +83,7 @@ function fetchNombrePais(paisBuscar) {
             l2.appendChild(li);
          }
       })
-      .catch((error) => globalThis.alert("Error al buscar el país: " + error));
+      .catch((error) => errorBusqueda(error));
 }
 
 function fetchCapitalPais(paisBuscar) {
@@ -134,7 +135,7 @@ function fetchCapitalPais(paisBuscar) {
             l1.appendChild(li);
          }
       })
-      .catch((error) => globalThis.alert("Error al buscar el país: " + error));
+      .catch((error) => errorBusqueda(error));
 }
 
 function fetchHabitantesPais(paisBuscar) {
@@ -166,7 +167,7 @@ function fetchHabitantesPais(paisBuscar) {
          t3.innerText = "Ubicación geográfica";
          p3.innerText = pais[0].latlng[0] + "°N, " + pais[0].latlng[1] + "°W";
       })
-      .catch((error) => globalThis.alert("Error al buscar el país: " + error));
+      .catch((error) => errorBusqueda(error));
 }
 
 function fetchIdiomasPais(paisBuscar) {
@@ -213,7 +214,7 @@ function fetchIdiomasPais(paisBuscar) {
          p2.innerText = Object.values(pais[0].currencies)[0].name + " (" + Object.values(pais[0].currencies)[0].symbol + ")";
 
       })
-      .catch((error) => globalThis.alert("Error al buscar el país: " + error));
+      .catch((error) => errorBusqueda(error));
 }
 
 function fetchImagenPais(paisBuscar) {
@@ -229,7 +230,7 @@ function fetchImagenPais(paisBuscar) {
          i1.setAttribute("src", pais[0].flags.svg);
          i1.setAttribute("alt", pais[0].flags.alt);
       })
-      .catch((error) => globalThis.alert("Error al buscar el país: " + error));
+      .catch((error) => errorBusqueda(error));
 }  
 
 function limpiarElementos() {
@@ -256,6 +257,25 @@ function cerrarModal() {
 function ocultarModal() {
    modal.style.display = "none";
    limpiarElementosModal();
+}
+
+function mostrarInformacion() {
+   nombre.style.display = "block";
+   capital.style.display = "block";
+   habitantes.style.display = "block";
+   idiomas.style.display = "block";
+}
+
+function ocultarInformacion() {
+   nombre.style.display = "none";
+   capital.style.display = "none";
+   habitantes.style.display = "none";
+   idiomas.style.display = "none";
+}
+
+function errorBusqueda(error) {
+   globalThis.alert("Error al buscar el país: " + error)
+   ocultarInformacion();
 }
 
 function buscarPais() {

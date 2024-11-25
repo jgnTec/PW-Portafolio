@@ -7,15 +7,22 @@
    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
    <link rel="stylesheet" href="css/pico-styles.css">
    <title>Ejemplo de fetching con API de Pokémon</title>
-   <link rel="stylesheet" href="css/poke-styles.css">
+   <style>
+      dt {  font-weight: bold; }
+      dd { text-transform: capitalize; }
+      audio { margin: 8px; }
+      h1 { text-align: center; }
+      div[role=search] { --pico-spacing: 0; }
+   </style>
    <script src="js/pokeapi_ej.js" defer></script>
 </head>
 <body>
    <main class="container">
-      <h1>PokeAPI</h1>
+      <h1>PokéAPI</h1>
       <nav>
          <ul type="none">
-           <li><i class="ph ph-arrow-left"></i> <a href="pokeapi.html">Volver a PokéAPI (sin buscador)</a></li>
+           <li><i class="ph ph-arrow-left"></i> <a href="pokeapi.html">Volver a AJAX con API de Pokémon</a></li>
+           <li><a href="api_aleatoria.html">Seguir a ejercicio: <em>RESTful Countries</em></a> <i class="ph ph-arrow-right"></i></li>
          </ul>
       </nav>
       <article>
@@ -44,8 +51,9 @@
       </article>
       <nav>
          <ul type="none">
-           <li><i class="ph ph-arrow-left"></i> <a href="pokeapi.html">Volver a PokéAPI (sin buscador)</a></li>
-         </ul>
+            <li><i class="ph ph-arrow-left"></i> <a href="pokeapi.html">Volver a AJAX con API de Pokémon</a></li>
+            <li><a href="api_aleatoria.html">Seguir a ejercicio: <em>RESTful Countries</em></a> <i class="ph ph-arrow-right"></i></li>
+          </ul>
       </nav>
    </main>
    <button class="boton-inicio outline secondary">

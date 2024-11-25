@@ -52,3 +52,5 @@ main > article > section > div#img-pais { width: 40%; }
    color: #00895a;
    transition: color 0.2s ease-in-out;
 }
+
+#nombre, #capital, #habitantes, #idiomas { display: none; }
