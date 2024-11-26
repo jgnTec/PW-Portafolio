@@ -25,7 +25,7 @@ function fetchPais(paisBuscar) {
          } else {
             contenidoCapital.innerText = "Este lugar no tiene capital";
          }
-         contenidoHabitantes.innerText = pais[0].population;
+         contenidoHabitantes.innerText = formatearNumero(pais[0].population, "habitantes");
 
          let idiomas = Object.values(pais[0].languages);
          for (let i = 0; i < idiomas.length; i++) {
@@ -71,12 +71,14 @@ function fetchNombrePais(paisBuscar) {
          p1.innerText = pais[0].translations.spa.common;
          t2.innerText = "Nombre oficial";
          p2.innerText = pais[0].translations.spa.official;
+         p2.style.width = "40ch";
          t3.innerText = "Nombres nativos";
 
          let nombresNativos = pais[0].name.nativeName;
          for (let i in nombresNativos) {
             let li = document.createElement("li");
             li.innerText = nombresNativos[i].official;
+            li.style.width = "40ch";
             l1.appendChild(li);
          }
 
@@ -169,9 +171,9 @@ function fetchHabitantesPais(paisBuscar) {
          contenidoModal.appendChild(p3);
 
          t1.innerText = "Habitantes";
-         p1.innerText = pais[0].population;
+         p1.innerText = formatearConSeparadores(pais[0].population);
          t2.innerText = "Superficie";
-         p2.innerText = pais[0].translations.spa.common + " tiene un área de " + pais[0].area + " m²";         
+         p2.innerText = pais[0].translations.spa.common + " tiene un área de " + (formatearNumero(pais[0].area, "superficie"));
          t3.innerText = "Ubicación geográfica";
          p3.innerText = pais[0].latlng[0] + "°N, " + pais[0].latlng[1] + "°W";
       })
@@ -239,7 +241,28 @@ function fetchImagenPais(paisBuscar) {
          i1.setAttribute("alt", pais[0].flags.alt);
       })
       .catch((error) => errorBusqueda(error));
-}  
+}
+
+function formatearNumero(numero, tipo) {
+   if (tipo === "habitantes") {
+      if (numero >= 1_000_000_000) {
+         return (numero / 1_000_000_000).toFixed(1).replace(/\.0$/, "") + " mil millones";
+      } else if (numero >= 1_000_000) {
+         return (numero / 1_000_000).toFixed(1).replace(/\.0$/, "") + (numero / 1_000_000 > 1 ? " millones" : " millón");
+      } else if (numero >= 1_000) {
+         return (numero / 1_000).toFixed(1).replace(/\.0$/, "") + " mil";
+      } else {
+         return numero.toString();
+      }
+   } else if (tipo === "superficie") {
+      return formatearConSeparadores(numero) + " km²";
+   }
+}
+
+function formatearConSeparadores(numero) {
+   // Usa espacios para separar cada 3 cifras
+   return numero.toLocaleString('es-MX');
+}
 
 function limpiarElementos() {
    contenidoNombre.innerText = "";
@@ -282,13 +305,21 @@ function ocultarInformacion() {
 }
 
 function errorBusqueda(error) {
-   globalThis.alert("Error al buscar el país: " + error)
+   if (error.message.includes("404")) {
+      alert("País no encontrado. Intenta con otro nombre.");
+   } else {
+      alert("Error al buscar el país: " + error.message);
+   }
    limpiarElementos();
    ocultarInformacion();
 }
 
 function buscarPais() {
-   var busqueda = cajaBusqueda.value;
+   let busqueda = cajaBusqueda.value.trim();
+   if (busqueda === "") {
+      alert("Por favor, escribe el nombre de un país.");
+      return;
+   }
    fetchPais(busqueda);
 }
 

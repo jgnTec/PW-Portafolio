@@ -28,6 +28,6 @@
 
       // Guardar el usuario...
 
-      // header("Location: usuarios.php?ok=1");
+      header("Location: usuarios.php?ok=1");
    }
 ?>

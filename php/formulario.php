@@ -8,13 +8,13 @@
       switch ($_GET['error']) {
          case 1:
             echo "⨉ Todos los campos son requeridos";
-            break;
-            case 2:
+         break;
+         case 2:
             echo "⨉ La edad debe ser número y mayor de 18";
-            break;
-            case 3:
+         break;
+         case 3:
             echo "⨉ El correo electrónico no es válido";
-            break;
+         break;
       }
       ?>
    </article>
